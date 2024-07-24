@@ -3,6 +3,8 @@ package microservices.book.social_multiplication.service;
 import microservices.book.social_multiplication.domain.Multiplication;
 import microservices.book.social_multiplication.domain.MultiplicationResultAttempt;
 
+import java.util.List;
+
 public interface MultiplicationService {
 
     /**
@@ -18,4 +20,6 @@ public interface MultiplicationService {
      * @return true if the attempt matches the result of the multiplication, false otherwise
      */
     boolean checkAttempt(final MultiplicationResultAttempt resultAttempt);
+
+    List<MultiplicationResultAttempt> getStatsForUser(String userAlias);
 }
